@@ -1,7 +1,7 @@
 #include "Cat.h"
 #include <iostream>
 
-Cat::Cat(std::string name) : name_(name) {}
+Cat::Cat(const std::string& name) : name_(name), found_(false) {}
 
 std::string Cat::getName() const {
     return name_;
@@ -25,4 +25,12 @@ void Cat::addressPassersby() const {
 void Cat::postAds() const {
     std::cout << "Размещаю объявления о " << name_ << "...\n";
     // для размещения объявлений
+}
+
+bool Cat::isFound() const {
+    return found_;
+}
+
+void Cat::setFound(bool found) {
+    found_ = found;
 }
