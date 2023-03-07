@@ -1,10 +1,11 @@
 #include "Cat.h"
+// Описывает публичный интерфейс класса Cat, который позволяет искать пропавшую кошку.
 #include <iostream>
 
 Cat::Cat(const std::string& name) : name_(name), found_(false) {}
 
-std::string Cat::getName() const {
-    return name_;
+std::string Cat::getName() const { // Конструктор, создающий объект кошки с заданным именем.
+    return name_; // Возвращает имя кошки.
 }
 
 void Cat::searchAnimalShelters() const {
@@ -26,11 +27,16 @@ void Cat::postAds() const {
     std::cout << "Размещаю объявления о " << name_ << "...\n";
     // для размещения объявлений
 }
+// Устанавливает статус найденности кошки.
+// Он может быть изменен, так как метод не является константным.
 
 bool Cat::isFound() const {
     return found_;
 }
 
+// Устанавливает статус найденности кошки.
+// Метод является константным, что означает, что он не может изменять состояние объекта.
+// Этот метод нужен, чтобы можно было получать статус найденности объекта, не изменяя его.
 void Cat::setFound(bool found) {
     found_ = found;
 }
