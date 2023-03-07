@@ -5,3 +5,5 @@
 /.vs/MissingCat/v17/Browse.VC.opendb
 /.vs/MissingCat/v17/Browse.VC.db-wal
 /.vs/MissingCat/v17/Browse.VC.db-shm
+/.vs/MissingCat/v17/Browse.VC.db
+/.gitignore

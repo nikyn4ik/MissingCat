@@ -11,6 +11,7 @@ public:
     void addressPassersby() const;
     void postAds() const;
     bool isFound() const;
+    void setFound(bool found) const;
     void setFound(bool found);
 
 private:
